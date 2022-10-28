@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Ocurrence } from 'app/data/schemas/ocurrence';
+import { Observable } from 'rxjs';
+import { OcurrenceService } from './../../data/services/ocurrence.service';
 
 @Component({
   selector: 'app-ocurrences',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OcurrencesComponent implements OnInit {
 
-  constructor() { }
+  ocurrences$: Observable<Ocurrence[]>;
 
-  ngOnInit(): void {
+  constructor(private ocurrenceService: OcurrenceService) {
+
   }
 
+  ngOnInit(): void {
+    this.ocurrences$ = this.ocurrenceService.getAll();
+    console.log(this.ocurrences$);
+  }
 }

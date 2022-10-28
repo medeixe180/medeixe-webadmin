@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-12">
     <div class="card">
       <div class="card-header">
@@ -254,4 +254,29 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
+<p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
+
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">latitude</th>
+			<th scope="col">longitude</th>
+			<th scope="col">tipoAgressao</th>
+			<th scope="col">data</th>
+			<th scope="col">atendido</th>
+			<th scope="col">vitima</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let ocurrence of ocurrences$ | async">
+      <th>{{ ocurrence.latitude }}</th>
+      <th>{{ ocurrence.longitude }}</th>
+      <th>{{ ocurrence.tipoagressao }}</th>
+      <th>{{ ocurrence.data }}</th>
+      <th>{{ ocurrence.atendido }}</th>
+      <th>{{ ocurrence.vitima }}</th>
+		</tr>
+	</tbody>
+</table>
