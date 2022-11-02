@@ -122,5 +122,31 @@
             "atendido": true,
             "vitima": "39eedb86-1f28-4129-b1bf-b50902166f58"
         }
+    ],
+    "agressoes": [
+      {
+        "id": 1,
+        "nome": "Arma de fogo"
+      },
+      {
+        "id": 2,
+        "nome": "Arma branca"
+      },
+      {
+        "id": 3,
+        "nome": "Violência física"
+      },
+      {
+        "id": 4,
+        "nome": "Violência verbal"
+      },
+      {
+        "id": 5,
+        "nome": "Violência sexual"
+      },
+      {
+        "id": 6,
+        "nome": "Violência patrimonial"
+      }
     ]
 }
